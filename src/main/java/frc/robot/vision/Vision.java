@@ -195,7 +195,7 @@ public class Vision extends SubsystemBase {
     distTo12 =
         UtilFunctions.getDistance(swerve.getPose(), fieldLayout.getTagPose(12).get().toPose2d());
     distTo18 =
-        UtilFunctions.getDistance(swerve.getPose(), fieldLayout.getTagPose(18).get().toPose2d());
+        UtilFunctions.getDistance(swerve.getPose(), fieldLayout.getTagPose(7).get().toPose2d());
   }
 
   /**

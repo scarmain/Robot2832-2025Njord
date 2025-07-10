@@ -130,7 +130,7 @@ public class AprilTagCamera {
 
     poseEstimator =
         new PhotonPoseEstimator(
-            Vision.fieldLayout, PoseStrategy.MULTI_TAG_PNP_ON_COPROCESSOR, robotToCamTransform);
+            Vision.fieldLayout, PoseStrategy.LOWEST_AMBIGUITY, robotToCamTransform);
     poseEstimator.setMultiTagFallbackStrategy(PoseStrategy.LOWEST_AMBIGUITY);
 
     this.singleTagStdDevs = singleTagStdDevs;
@@ -316,7 +316,7 @@ public class AprilTagCamera {
         if (tag.fiducialId == 12) {
           distTo12 = UtilFunctions.getDistance(tag.bestCameraToTarget);
         }
-        if (tag.fiducialId == 18) {
+        if (tag.fiducialId == 7) {
           distTo18 = UtilFunctions.getDistance(tag.bestCameraToTarget);
         }
       }
@@ -367,7 +367,7 @@ public class AprilTagCamera {
         avgDist /= numTags;
         // Decrease std devs if multiple targets are visible
         if (estimatedPose.get().strategy == PoseStrategy.MULTI_TAG_PNP_ON_COPROCESSOR) {
-          estStdDevs = multiTagStdDevs;
+          // estStdDevs = multiTagStdDevs;
         }
         // Increase std devs based on (average) distance
         if (numTags == 1 && avgDist > 4) {
