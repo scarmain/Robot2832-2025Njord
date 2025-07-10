@@ -15,7 +15,7 @@ public class ClimbHw extends Climb {
   private TalonFXMotor climbMotor;
   TalonFX rawMotor;
   PositionVoltage positionSetter;
-  static final double CLIMB_END_MEASURE = 0.31;
+  static final double CLIMB_END_MEASURE = 0.324;
 
   public ClimbHw() {
     super();

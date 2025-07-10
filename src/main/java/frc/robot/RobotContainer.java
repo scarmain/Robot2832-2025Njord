@@ -252,7 +252,7 @@ public class RobotContainer {
     NamedCommands.registerCommand(
         "FineDriveProcess",
         swerveDrive.alignToPoseAllianceFast(
-            new Pose2d(6.118, 0.550, Rotation2d.fromDegrees(-90.))));
+            new Pose2d(6.118, 0.450, Rotation2d.fromDegrees(-90.))));
     NamedCommands.registerCommand(
         "FineDriveNet",
         swerveDrive.alignToPoseAllianceFast(new Pose2d(8.26, 4.81, Rotation2d.fromDegrees(180.))));
